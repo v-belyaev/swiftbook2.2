@@ -65,7 +65,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func checkButtonPressed(_ sender: UIButton) {
-        let alert = createSlider()
+        let alert = createAlert()
         self.present(alert, animated: true) {
             self.setRandomValuesForSliders()
             self.setRandomTargetColors()
@@ -114,7 +114,7 @@ class ViewController: UIViewController {
         return Int((1.0 - difference) * 100.0 + 0.5)
     }
     
-    private func createSlider() -> UIAlertController {
+    private func createAlert() -> UIAlertController {
         let score = computeScore()
         let alert = UIAlertController(title: "Alert", message: "Your score: \(score)", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
